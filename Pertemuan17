@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Fetching response</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js" integrity="sha512-QTnb9BQkG4fBYIt9JGvYmxPpd6TBeKp6lsUrtiVQsrJ9sb33Bn9s0wMQO9qVBFbPX3xHRAsBHvXlcsrnJjExjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <ol id="list">
+    </ol>
+
+    <script>
+        let backend = "http://api.bacod.id/attendance/accumulation/3?limit=100";
+
+        // axios.get(backend)
+        // .then((response) => {
+        //     console.log(response.data.results.data[37].name)
+        //     })
+        //     .catch( (response) => {
+        //         console.log(response);
+        //     })
+
+        axios.get(backend).then((response) => {
+            let hasilAkhir = response.data.results.data
+            let htmlString =""
+            hasilAkhir.forEach(orang => {
+                htmlString += `<li>${orang.name}</li>`;
+                console.log(hasilAkhir)
+            });
+            document.getElementById("list").innerHTML = htmlString
+            })
+    </script>
+</body>
+</html>
