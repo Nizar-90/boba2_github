@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 14</title>
+    <script>
+
+// <----------------------------------split--------------------------------------------------->
+let kalimat1 = "Restu Ganteng keknya"
+
+let kalimatv2 = kalimat1.split(" ")
+
+console.log(kalimatv2)
+
+console.log(   kalimatv2[0]  )
+// <----------------------------------split--------------------------------------------------->
+
+// <----------------------------------join---------------------------------------------------->
+let kalimat2 = ["Restu","Ganteng","keknya"]
+let kalimatv3 = kalimat2.join("-")
+
+console.log(kalimatv3)
+
+console.log(   kalimatv3[0]  )
+// <----------------------------------join---------------------------------------------------->
+
+// <----------------------------------join---------------------------------------------------->
+let kalimat3 = ["hadi","pasti","tampan"]
+let gabung = [...kalimat2, ...kalimat3]
+console.log(gabung)
+// <----------------------------------join---------------------------------------------------->
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
